@@ -1,0 +1,27 @@
+vim.opt.number = true           
+vim.opt.relativenumber = true   
+vim.opt.shiftwidth = 4          
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true        
+vim.opt.mouse = "a"             
+vim.opt.termguicolors = true 
+vim.opt.clipboard = "unnamedplus"
+vim.g.mapleader = " "
+
+vim.opt.langmap = 'ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz'
+vim.keymap.set('n', 'Ж', ':', { noremap = true })
+
+-- Setup cmd language --
+local ru = "йцукенгшщзхъфывапролджэячсмитьбю.ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ,"
+local en = "qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>?"
+
+local char_count = vim.fn.strchars(ru)
+
+for i = 0, char_count - 1 do
+    local r_char = vim.fn.strcharpart(ru, i, 1)
+    local e_char = vim.fn.strcharpart(en, i, 1)
+    
+    vim.keymap.set('c', r_char, e_char)
+end
+
