@@ -1,5 +1,3 @@
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(event)
         local opts = { buffer = event.buf }
@@ -22,11 +20,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- Pyright
-vim.lsp.config("pyright", {
-    cmd = { "pyright-langserver", "--stdio" },
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+vim.lsp.config("basedpyright", {
+    cmd = { "basedpyright-langserver", "--stdio" },
     filetypes = { "python" },
     root_markers = { ".git", "pyproject.toml" },
     capabilities = capabilities,
 })
 
-vim.lsp.enable("pyright")
+vim.lsp.enable("basedpyright")
