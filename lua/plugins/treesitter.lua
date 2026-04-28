@@ -3,7 +3,7 @@ return {
     lazy = false,
     build = ":TSUpdate",
     opts = {
-        ensure_installed = { "python" },
+        ensure_installed = { "python", "markdown", "markdown_inline" },
         highlight = {
             enable = true,
         },

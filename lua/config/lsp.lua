@@ -24,7 +24,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 vim.lsp.config("basedpyright", {
     cmd = { "basedpyright-langserver", "--stdio" },
-    filetypes = { "python" },
+    filetypes = { "python", "ipynb"},
     root_markers = { ".git", "pyproject.toml" },
     capabilities = capabilities,
 })
