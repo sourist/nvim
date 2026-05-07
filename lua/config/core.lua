@@ -21,8 +21,8 @@ vim.g.loaded_netrwPlugin = 1
 
 
 -- Setup cmd language --
-local ru = "йцукенгшщзхъфывапролджэячсмитьбю.ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ,"
-local en = "qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>?"
+local ru = "йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ"
+local en = "qwertyuiop[]asdfghjkl;'zxcvbnmQWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM"
 
 local char_count = vim.fn.strchars(ru)
 
