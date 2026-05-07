@@ -17,6 +17,9 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
+    rocks = {
+        hererocks = true,  -- recommended if you do not have global installation of Lua 5.1.
+    },
     spec = {
         -- import your plugins
         { import = "plugins" },
